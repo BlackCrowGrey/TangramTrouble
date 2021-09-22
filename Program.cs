@@ -1,5 +1,8 @@
 ﻿using System;
-
+/*
+ * Names: Zawn Zachow,
+ * Project: Tangram Trouble
+ */
 namespace TangramTrouble
 {
     public static class Program

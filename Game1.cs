@@ -1,13 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+/*
+ * Names: Zawn Zachow,
+ * Project: Tangram Trouble
+ */
 namespace TangramTrouble
 {
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        //team-made fields
+        int score;
+        int level;
+        int totalTangrams;
+        Texture2D background;
+
 
         public Game1()
         {
@@ -47,6 +57,19 @@ namespace TangramTrouble
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+
+        }
+
+        //team-made methods
+
+        public void NextLevel()
+        {
+            //put code here later
+        }
+
+        public void SingleKeyPress(KeyboardState key)
+        {
+
         }
     }
 }
