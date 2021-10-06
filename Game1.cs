@@ -12,8 +12,7 @@ namespace TangramTrouble
         Menu,
         Options,
         GamePlay,
-        Pause,
-        GameOver
+        Pause
     }
 
     public class Game1 : Game
@@ -29,6 +28,7 @@ namespace TangramTrouble
         Texture2D background;
 
         GameState gamestate;
+        GameState prevGamestate;
 
         KeyboardState prevKB;
 
@@ -59,6 +59,7 @@ namespace TangramTrouble
                 Exit();
 
             // TODO: Add your update logic here
+
             switch (gamestate)
             {
                 case GameState.Menu:
@@ -73,7 +74,11 @@ namespace TangramTrouble
                     break;
 
                 case GameState.Options:
-                    if (SingleKeyPress(Keys.O))
+                    if (prevGamestate == GameState.Menu && SingleKeyPress(Keys.O))
+                    {
+                        gamestate = GameState.Menu;
+                    }
+                    if (prevGamestate == GameState.Pause && SingleKeyPress(Keys.O))
                     {
                         gamestate = GameState.Menu;
                     }
@@ -91,14 +96,11 @@ namespace TangramTrouble
                     {
                         gamestate = GameState.GamePlay;
                     }
-                    if (SingleKeyPress(Keys.E))
+                    if (SingleKeyPress(Keys.O))
                     {
-                        gamestate = GameState.Menu;
+                        gamestate = GameState.Options;
                     }
-                    break;
-
-                case GameState.GameOver:
-                    if (SingleKeyPress(Keys.Enter))
+                    if (SingleKeyPress(Keys.E))
                     {
                         gamestate = GameState.Menu;
                     }
@@ -106,8 +108,9 @@ namespace TangramTrouble
 
             }
 
+            prevGamestate = gamestate; 
             prevKB = Keyboard.GetState();
-            //Leave the prevKB declaration at the end of the method: this one has to be last. -Zawn
+            //Leave the prevKB and prevGamestate declarations at the end of the method: they need to be last. -Zawn
 
             base.Update(gameTime);
         }
@@ -137,10 +140,6 @@ namespace TangramTrouble
                     //pause screen
                     break;
 
-                case GameState.GameOver:
-                    //gameover screen
-                    break;
-
             }
 
             _spriteBatch.End();
@@ -154,6 +153,7 @@ namespace TangramTrouble
         public void NextLevel()
         {
             level++;
+            totalTangrams += levelTangrams;
         }
 
         /// <summary>
