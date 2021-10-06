@@ -7,6 +7,15 @@ using Microsoft.Xna.Framework.Input;
  */
 namespace TangramTrouble
 {
+    enum GameState
+    {
+        Menu,
+        Options,
+        GamePlay,
+        Pause,
+        GameOver
+    }
+
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
@@ -15,9 +24,13 @@ namespace TangramTrouble
         //team-made fields
         int score;
         int level;
+        int levelTangrams;
         int totalTangrams;
         Texture2D background;
 
+        GameState gamestate;
+
+        KeyboardState prevKB;
 
         public Game1()
         {
@@ -46,6 +59,55 @@ namespace TangramTrouble
                 Exit();
 
             // TODO: Add your update logic here
+            switch (gamestate)
+            {
+                case GameState.Menu:
+                    if (SingleKeyPress(Keys.Enter))
+                    {
+                        gamestate = GameState.GamePlay;
+                    }
+                    if (SingleKeyPress(Keys.O))
+                    {
+                        gamestate = GameState.Options;
+                    }
+                    break;
+
+                case GameState.Options:
+                    if (SingleKeyPress(Keys.O))
+                    {
+                        gamestate = GameState.Menu;
+                    }
+                    break;
+
+                case GameState.GamePlay:
+                    if (SingleKeyPress(Keys.Space))
+                    {
+                        gamestate = GameState.Pause;
+                    }
+                    break;
+
+                case GameState.Pause:
+                    if (SingleKeyPress(Keys.Space))
+                    {
+                        gamestate = GameState.GamePlay;
+                    }
+                    if (SingleKeyPress(Keys.E))
+                    {
+                        gamestate = GameState.Menu;
+                    }
+                    break;
+
+                case GameState.GameOver:
+                    if (SingleKeyPress(Keys.Enter))
+                    {
+                        gamestate = GameState.Menu;
+                    }
+                    break;
+
+            }
+
+            prevKB = Keyboard.GetState();
+            //Leave the prevKB declaration at the end of the method: this one has to be last. -Zawn
 
             base.Update(gameTime);
         }
@@ -55,6 +117,33 @@ namespace TangramTrouble
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            switch (gamestate)
+            {
+                case GameState.Menu:
+                    //menu drawing
+                    break;
+
+                case GameState.Options:
+                    //options drawing
+                    break;
+
+                case GameState.GamePlay:
+                    //gameplay stuff
+                    break;
+
+                case GameState.Pause:
+                    //pause screen
+                    break;
+
+                case GameState.GameOver:
+                    //gameover screen
+                    break;
+
+            }
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
 
@@ -64,12 +153,17 @@ namespace TangramTrouble
 
         public void NextLevel()
         {
-            //put code here later
+            level++;
         }
 
-        public void SingleKeyPress(KeyboardState key)
+        /// <summary>
+        /// Checks for a single key press of a specified key.
+        /// </summary>
+        /// <param name="key"> The key being pressed. </param>
+        /// <returns>True if the key was up in the last frame and down in the current. Otherwise false.</returns>
+        public bool SingleKeyPress(Keys key)
         {
-
+            return Keyboard.GetState().IsKeyDown(key) && prevKB.IsKeyUp(key);
         }
     }
 }
