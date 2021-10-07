@@ -26,6 +26,8 @@ namespace TangramTrouble
         int levelShapes;
         int totalShapes;
         Texture2D background;
+        Texture2D button;
+        SpriteFont font;
 
         GameState gamestate;
         GameState prevGamestate;
