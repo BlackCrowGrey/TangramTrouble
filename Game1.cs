@@ -1,4 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 /*
@@ -120,7 +123,7 @@ namespace TangramTrouble
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
@@ -128,18 +131,22 @@ namespace TangramTrouble
             {
                 case GameState.Menu:
                     //menu drawing
+                    GraphicsDevice.Clear(Color.Tan);
                     break;
 
                 case GameState.Options:
                     //options drawing
+                    GraphicsDevice.Clear(Color.White);
                     break;
 
                 case GameState.GamePlay:
                     //gameplay stuff
+                    GraphicsDevice.Clear(Color.SaddleBrown);
                     break;
 
                 case GameState.Pause:
                     //pause screen
+                    GraphicsDevice.Clear(Color.BlanchedAlmond);
                     break;
 
             }
