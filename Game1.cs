@@ -70,21 +70,25 @@ namespace TangramTrouble
                 case GameState.Menu:
                     if (SingleKeyPress(Keys.Enter))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.GamePlay;
                     }
                     if (SingleKeyPress(Keys.O))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Options;
                     }
                     break;
 
                 case GameState.Options:
-                    if (prevGamestate == GameState.Menu && SingleKeyPress(Keys.O))
+                    if (prevGamestate == GameState.Menu && (SingleKeyPress(Keys.O) == true))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Menu;
                     }
-                    if (prevGamestate == GameState.Pause && SingleKeyPress(Keys.O))
+                    if (prevGamestate == GameState.Pause && (SingleKeyPress(Keys.O) == true))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Pause;
                     }
                     break;
@@ -92,6 +96,7 @@ namespace TangramTrouble
                 case GameState.GamePlay:
                     if (SingleKeyPress(Keys.Space))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Pause;
                     }
                     break;
@@ -99,23 +104,25 @@ namespace TangramTrouble
                 case GameState.Pause:
                     if (SingleKeyPress(Keys.Space))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.GamePlay;
                     }
                     if (SingleKeyPress(Keys.O))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Options;
                     }
                     if (SingleKeyPress(Keys.E))
                     {
+                        prevGamestate = gamestate;
                         gamestate = GameState.Menu;
                     }
                     break;
 
             }
-
-            prevGamestate = gamestate; 
+ 
             prevKB = Keyboard.GetState();
-            //Leave the prevKB and prevGamestate declarations at the end of the method: they need to be last. -Zawn
+            //Leave the prevKB declaration at the end of the method: it needs to be last. -Zawn
 
             base.Update(gameTime);
         }
