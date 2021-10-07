@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 /*
- * Names: Zawn Zachow,
+ * Names: Zawn Zachow, Dylan Mahala
  * Project: Tangram Trouble
  */
 namespace TangramTrouble

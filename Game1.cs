@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 /*
- * Names: Zawn Zachow,
+ * Names: Zawn Zachow, Dylan Mahala
  * Project: Tangram Trouble
  */
 namespace TangramTrouble
@@ -23,8 +23,8 @@ namespace TangramTrouble
         //team-made fields
         int score;
         int level;
-        int levelTangrams;
-        int totalTangrams;
+        int levelShapes;
+        int totalShapes;
         Texture2D background;
 
         GameState gamestate;
@@ -80,7 +80,7 @@ namespace TangramTrouble
                     }
                     if (prevGamestate == GameState.Pause && SingleKeyPress(Keys.O))
                     {
-                        gamestate = GameState.Menu;
+                        gamestate = GameState.Pause;
                     }
                     break;
 
@@ -153,7 +153,7 @@ namespace TangramTrouble
         public void NextLevel()
         {
             level++;
-            totalTangrams += levelTangrams;
+            totalShapes += levelShapes;
         }
 
         /// <summary>
