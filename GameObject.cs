@@ -13,7 +13,7 @@ namespace TangramTrouble
     class GameObject
     {
         /*Fields*/
-        private Vector2 position;
+        private Rectangle position;
         private Texture2D image;
 
         /*Properties*/
@@ -34,9 +34,18 @@ namespace TangramTrouble
         }
 
         /// <summary>
+        /// Rectangle surrounding the object.
+        /// </summary>
+        public Rectangle Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
+        /// <summary>
         /// X position of the object.
         /// </summary>
-        public float PositionX
+        public int PositionX
         {
             get {  return position.X; }
             set { position.X = value; }
@@ -45,7 +54,7 @@ namespace TangramTrouble
         /// <summary>
         /// Y position of the object.
         /// </summary>
-        public float PositionY
+        public int PositionY
         {
             get { return position.Y; }
             set { position.Y = value; }
@@ -55,14 +64,17 @@ namespace TangramTrouble
         public GameObject(Texture2D image, int xStart, int yStart)
         {
             this.image = image;
-            PositionX = xStart;
-            PositionY = yStart;
+            position = new Rectangle(
+                xStart, 
+                yStart, 
+                image.Width, 
+                image.Height);
         }
 
         /*Methods*/
         public virtual void Draw(SpriteBatch sb, Color color)
         {
-            //place code here
+            sb.Draw(image, position, Color.White);
         }
     }
 }

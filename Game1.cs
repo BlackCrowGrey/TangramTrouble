@@ -166,6 +166,9 @@ namespace TangramTrouble
 
         //team-made methods
 
+        /// <summary>
+        /// Moves the player to the next level of the game.
+        /// </summary>
         public void NextLevel()
         {
             level++;

@@ -23,12 +23,28 @@ namespace TangramTrouble
 
         /*Methods*/
 
+        /// <summary>
+        /// Collision check ya yeet
+        /// </summary>
+        /// <param name="otherShape"></param>
+        /// <returns></returns>
         public bool CheckIsTouching(Shape otherShape)
         {
-            //put code here later
-            return true;
+            if (Position.Intersects(otherShape.Position) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        /// <summary>
+        /// Draws the shape.
+        /// </summary>
+        /// <param name="sb"></param>
+        /// <param name="color"></param>
         public override void Draw(SpriteBatch sb, Color color)
         {
             base.Draw(sb, color);
