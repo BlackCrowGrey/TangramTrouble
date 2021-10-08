@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 /*
- * Names: Zawn Zachow, Dylan Mahala
+ * Names: Zawn Zachow, Dylan Mahala, Beckett Raver
  * Project: Tangram Trouble
  */
 namespace TangramTrouble

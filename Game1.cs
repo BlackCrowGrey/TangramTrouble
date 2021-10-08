@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 /*
- * Names: Zawn Zachow, Dylan Mahala
+ * Names: Zawn Zachow, Dylan Mahala, Beckett Raver
  * Project: Tangram Trouble
  */
 namespace TangramTrouble
@@ -31,6 +31,7 @@ namespace TangramTrouble
         Texture2D background;
         Texture2D button;
         SpriteFont font;
+        Gui gui;
 
         GameState gamestate;
         GameState prevGamestate;
@@ -47,15 +48,20 @@ namespace TangramTrouble
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            gui = new Gui();
+            gui.GD = _graphics;
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            gui.SB = _spriteBatch;
             // TODO: use this.Content to load your game content here
+            button = this.Content.Load<Texture2D>("blankButton");
+            gui.Button = button;
+            font = this.Content.Load<SpriteFont>("SpriteFont1");
+            gui.Font = font;
         }
 
         protected override void Update(GameTime gameTime)
@@ -128,9 +134,7 @@ namespace TangramTrouble
         }
 
         protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            
+        {   
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
@@ -138,22 +142,22 @@ namespace TangramTrouble
             {
                 case GameState.Menu:
                     //menu drawing
-                    GraphicsDevice.Clear(Color.Tan);
+                    gui.DrawMenu();
                     break;
 
                 case GameState.Options:
                     //options drawing
-                    GraphicsDevice.Clear(Color.White);
+                    gui.DrawOptions();
                     break;
 
                 case GameState.GamePlay:
                     //gameplay stuff
-                    GraphicsDevice.Clear(Color.SaddleBrown);
+                    gui.DrawGamePlay();
                     break;
 
                 case GameState.Pause:
                     //pause screen
-                    GraphicsDevice.Clear(Color.BlanchedAlmond);
+                    gui.DrawPause();
                     break;
 
             }
