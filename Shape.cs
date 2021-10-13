@@ -19,7 +19,7 @@ namespace TangramTrouble
         /*Constructors*/
         public Shape(Texture2D image, int xStart, int yStart) : base(image, xStart, yStart)
         {
-
+            
         }
 
         /*Methods*/
@@ -49,6 +49,25 @@ namespace TangramTrouble
         public override void Draw(SpriteBatch sb, Color color)
         {
             base.Draw(sb, color);
+        }
+
+        public void Drag(MouseState mouse)
+        {
+            //gets the location of the mouse, but as a rectangle
+            Rectangle mouseLoc = new Rectangle(mouse.Position.X, mouse.Position.Y, 1, 1);
+
+            //if the mouse is clicking the shape AND is on the shape...
+            if ((this.Position.Intersects(mouseLoc) == true) && (mouse.LeftButton == ButtonState.Pressed))
+            {
+                PositionX = mouse.Position.X - Width/2;
+                PositionY = mouse.Position.Y - Height/2;
+            }
+        }
+
+        public void Rotate()
+        {
+            Vector2 origin = new Vector2(Image.Width/2, Image.Height/2);
+
         }
     }
 }

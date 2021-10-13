@@ -17,6 +17,13 @@ namespace TangramTrouble
         private Texture2D image;
 
         /*Properties*/
+
+        protected Texture2D Image
+        {
+            get { return image; }
+            set { image = value; }
+        }
+
         /// <summary>
         /// Width of the object.
         /// </summary>
@@ -31,6 +38,11 @@ namespace TangramTrouble
         public int Height
         {
             get { return image.Height; }
+        }
+
+        public Vector2 Origin
+        {
+            get { return new Vector2(image.Width / 2, image.Height / 2); }
         }
 
         /// <summary>

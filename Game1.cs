@@ -33,6 +33,10 @@ namespace TangramTrouble
         SpriteFont font;
         Gui gui;
 
+        Shape testShape;
+        Texture2D gummy;
+        MouseState mouse;
+
         GameState gamestate;
         GameState prevGamestate;
 
@@ -62,6 +66,9 @@ namespace TangramTrouble
             gui.Button = button;
             font = this.Content.Load<SpriteFont>("SpriteFont1");
             gui.Font = font;
+
+            gummy = this.Content.Load<Texture2D>("greenGummy");
+            testShape = new Shape(gummy, 10, 10);
         }
 
         protected override void Update(GameTime gameTime)
@@ -70,6 +77,7 @@ namespace TangramTrouble
                 Exit();
 
             // TODO: Add your update logic here
+            mouse = Mouse.GetState();
 
             switch (gamestate)
             {
@@ -105,6 +113,8 @@ namespace TangramTrouble
                         prevGamestate = gamestate;
                         gamestate = GameState.Pause;
                     }
+
+                    testShape.Drag(mouse);
                     break;
 
                 case GameState.Pause:
@@ -153,6 +163,7 @@ namespace TangramTrouble
                 case GameState.GamePlay:
                     //gameplay stuff
                     gui.DrawGamePlay();
+                    testShape.Draw(_spriteBatch, Color.White);
                     break;
 
                 case GameState.Pause:
