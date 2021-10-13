@@ -18,6 +18,14 @@ namespace TangramTrouble
 		//Fields to hold needed data to draw
 		private SpriteBatch sb;
 		private GraphicsDeviceManager gd;
+		private Texture2D outline;
+		private Texture2D bigTriangle1;
+		private Texture2D bigTriangle2;
+		private Texture2D mediumTriangle;
+		private Texture2D smallTriangle1;
+		private Texture2D smallTriangle2;
+		private Texture2D square;
+		private Texture2D parallelogram;
 		private Texture2D button;
 		private SpriteFont font;
 
@@ -37,6 +45,78 @@ namespace TangramTrouble
 		{
 			get { return gd; }
 			set { gd = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the tangram outline image
+		/// </summary>
+		public Texture2D Outline
+		{
+			get { return outline; }
+			set { outline = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the first big triangle image
+		/// </summary>
+		public Texture2D BigTriangle1
+		{
+			get { return bigTriangle1; }
+			set { bigTriangle1 = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the second big triangle image
+		/// </summary>
+		public Texture2D BigTriangle2
+		{
+			get { return bigTriangle2; }
+			set { bigTriangle2 = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the medium triangle image
+		/// </summary>
+		public Texture2D MediumTriangle
+		{
+			get { return mediumTriangle; }
+			set { mediumTriangle = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the first small triangle image
+		/// </summary>
+		public Texture2D SmallTriangle1
+		{
+			get { return smallTriangle1; }
+			set { smallTriangle1 = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the second small triangle image
+		/// </summary>
+		public Texture2D SmallTriangle2
+		{
+			get { return smallTriangle2; }
+			set { smallTriangle2 = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the square image
+		/// </summary>
+		public Texture2D Square
+		{
+			get { return square; }
+			set { square = value; }
+		}
+
+		/// <summary>
+		/// Texture2D that holds the parallelogram image
+		/// </summary>
+		public Texture2D Parallelogram
+		{
+			get { return parallelogram; }
+			set { parallelogram = value; }
 		}
 
 		/// <summary>
@@ -108,14 +188,32 @@ namespace TangramTrouble
 			gd.GraphicsDevice.Clear(Color.Tan);
 
 			//Placeholder Until Board Is Designed
-			sb.DrawString(font, "BOARD GOES HERE", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("BOARD GOES HERE").Length() / 2, 50), Color.DarkSlateGray);
+			sb.DrawString(font, "Level 1", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Level 1").Length() / 2, 25), Color.DarkSlateGray);
 
 			//Displays Button Instructing User How To Move Between Screens
-			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 100, 360, 30), Color.White);
-			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 104), Color.MediumPurple);
+			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 50, 360, 30), Color.White);
+			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 54), Color.MediumPurple);
+
+			//Outline Used To Represent The Shaped To Be Made Using The Tangram Pieces
+			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 100, 100, 200, 250), Color.White);
 
 			//Repository To Hold Blocks To Use In The Puzzles
 			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 100, gd.GraphicsDevice.Viewport.Width, 100), Color.DarkGray);
+
+			//Displays All Of The Tangram Pieces
+			sb.Draw(bigTriangle1, new Rectangle(50, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(bigTriangle2, new Rectangle(150, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(mediumTriangle, new Rectangle(250, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(smallTriangle1, new Rectangle(350, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(smallTriangle2, new Rectangle(450, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(square, new Rectangle(550, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
+
+			sb.Draw(parallelogram, new Rectangle(650, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
 		}
 
 		/// <summary>

@@ -28,7 +28,14 @@ namespace TangramTrouble
         int level;
         int levelShapes;
         int totalShapes;
-        Texture2D background;
+        Texture2D tangramOutline;
+        Texture2D bigTriangleA;
+        Texture2D bigTriangleB;
+        Texture2D mediumTriangle;
+        Texture2D smallTriangleA;
+        Texture2D smallTriangleB;
+        Texture2D square;
+        Texture2D parallelogram;
         Texture2D button;
         SpriteFont font;
         Gui gui;
@@ -58,6 +65,22 @@ namespace TangramTrouble
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             gui.SB = _spriteBatch;
             // TODO: use this.Content to load your game content here
+            tangramOutline = this.Content.Load<Texture2D>("tangram");
+            gui.Outline = tangramOutline;
+            bigTriangleA = this.Content.Load<Texture2D>("bigTriangle1");
+            gui.BigTriangle1 = bigTriangleA;
+            bigTriangleB = this.Content.Load<Texture2D>("bigTriangle2");
+            gui.BigTriangle2 = bigTriangleB;
+            mediumTriangle = this.Content.Load<Texture2D>("mediumTriangle");
+            gui.MediumTriangle = mediumTriangle;
+            smallTriangleA = this.Content.Load<Texture2D>("smallTriangle1");
+            gui.SmallTriangle1 = smallTriangleA;
+            smallTriangleB = this.Content.Load<Texture2D>("smallTriangle2");
+            gui.SmallTriangle2 = smallTriangleB;
+            square = this.Content.Load<Texture2D>("square");
+            gui.Square = square;
+            parallelogram = this.Content.Load<Texture2D>("parallelogram");
+            gui.Parallelogram = parallelogram;
             button = this.Content.Load<Texture2D>("blankButton");
             gui.Button = button;
             font = this.Content.Load<SpriteFont>("SpriteFont1");
