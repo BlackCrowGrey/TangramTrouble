@@ -49,11 +49,7 @@
 /processorParam:TextureFormat=Color
 /build:blankButton.png
 
-<<<<<<< HEAD
 #begin greenGummy.PNG
-=======
-#begin mediumTriangle.png
->>>>>>> 3a3307d250ccab3ee30c693da55e793996dac0a8
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -63,9 +59,18 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-<<<<<<< HEAD
 /build:greenGummy.PNG
-=======
+
+#begin mediumTriangle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
 /build:mediumTriangle.png
 
 #begin parallelogram.png
@@ -103,7 +108,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:smallTriangle2.png
->>>>>>> 3a3307d250ccab3ee30c693da55e793996dac0a8
 
 #begin SpriteFont1.spritefont
 /importer:FontDescriptionImporter
