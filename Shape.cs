@@ -66,7 +66,6 @@ namespace TangramTrouble
 
         public void Rotate()
         {
-            Vector2 origin = new Vector2(Image.Width/2, Image.Height/2);
 
         }
     }
