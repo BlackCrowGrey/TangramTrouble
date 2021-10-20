@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rkkts07GTOlyx+SWCwng17cKCaGL65XPC5IgTWneP2jnw6BNvpbUYi+eWH3rMNBEA0vN9bIKt6BS1k+dCFDd7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\becke\\source\\repos\\TangramTrouble\\TangramTrouble.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\becke\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\becke\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}

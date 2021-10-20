@@ -157,10 +157,10 @@ namespace TangramTrouble
 
 			//Displays Buttons Instructing User How To Move Between Screens
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 100, 360, 30), Color.White);
-			sb.DrawString(font, "Press Enter To Start The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Enter To Start The Game").Length() / 2, 104), Color.MediumPurple);
+			sb.DrawString(font, "Press Enter To Start The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Enter To Start The Game").Length() / 2, 104), Color.SteelBlue);
 			
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 150, 360, 30), Color.White);
-			sb.DrawString(font, "Press O To Go To The Options Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Go To The Options Menu").Length() / 2, 154), Color.MediumPurple);
+			sb.DrawString(font, "Press O To Go To The Options Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Go To The Options Menu").Length() / 2, 154), Color.SteelBlue);
 		}
 
 		/// <summary>
@@ -169,14 +169,14 @@ namespace TangramTrouble
 		public void DrawOptions()
         {
 			//Sets Background Color
-			gd.GraphicsDevice.Clear(Color.White);
+			gd.GraphicsDevice.Clear(Color.MintCream);
 
 			//Displays Options Screen Title
 			sb.DrawString(font, "OPTIONS:", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("OPTIONS:").Length() / 2, 50), Color.DarkSlateGray);
 
 			//Displays Button Instructing User How To Move Between Screens
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 100, 360, 30), Color.White);
-			sb.DrawString(font, "Press O To Return To The Previous Screen", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Return To The Previous Screen").Length() / 2, 104), Color.MediumPurple);
+			sb.DrawString(font, "Press O To Return To The Previous Screen", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Return To The Previous Screen").Length() / 2, 104), Color.SteelBlue);
 		}
 
 		/// <summary>
@@ -192,13 +192,13 @@ namespace TangramTrouble
 
 			//Displays Button Instructing User How To Move Between Screens
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 50, 360, 30), Color.White);
-			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 54), Color.MediumPurple);
+			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 54), Color.SteelBlue);
 
 			//Outline Used To Represent The Shaped To Be Made Using The Tangram Pieces
-			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 100, 100, 200, 250), Color.White);
+			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 225, 100, 450, 600), Color.White);
 
 			//Repository To Hold Blocks To Use In The Puzzles
-			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 100, gd.GraphicsDevice.Viewport.Width, 100), Color.DarkGray);
+			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 175, gd.GraphicsDevice.Viewport.Width, 175), Color.DarkGray);
 
 			//Displays All Of The Tangram Pieces
 			sb.Draw(bigTriangle1, new Rectangle(50, gd.GraphicsDevice.Viewport.Height - 75, 100, 100), Color.White);
@@ -229,13 +229,13 @@ namespace TangramTrouble
 
 			//Displays Buttons Instructing User How To Move Between Screens
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 100, 360, 30), Color.White);
-			sb.DrawString(font, "Press Space To Unpause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Unpause The Game").Length() / 2, 104), Color.MediumPurple);
+			sb.DrawString(font, "Press Space To Unpause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Unpause The Game").Length() / 2, 104), Color.SteelBlue);
 			
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 150, 360, 30), Color.White);
-			sb.DrawString(font, "Press O To Go To The Options Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Go To The Options Menu").Length() / 2, 154), Color.MediumPurple);
+			sb.DrawString(font, "Press O To Go To The Options Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press O To Go To The Options Menu").Length() / 2, 154), Color.SteelBlue);
 			
 			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 200, 360, 30), Color.White);
-			sb.DrawString(font, "Press E Return To The Main Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press E Return To The Main Menu").Length() / 2, 204), Color.MediumPurple);
+			sb.DrawString(font, "Press E Return To The Main Menu", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press E Return To The Main Menu").Length() / 2, 204), Color.SteelBlue);
 		}
 	}
 }

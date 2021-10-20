@@ -167,7 +167,12 @@ namespace TangramTrouble
         }
 
         protected override void Draw(GameTime gameTime)
-        {   
+        {
+            //Enlarges the window size
+            _graphics.PreferredBackBufferWidth = 1200;
+            _graphics.PreferredBackBufferHeight = 900;
+            _graphics.ApplyChanges();
+
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
