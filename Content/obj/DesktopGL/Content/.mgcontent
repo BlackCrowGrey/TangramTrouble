@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+<<<<<<< HEAD
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle1.png</File>
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle2.png</File>
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/blankButton.png</File>
@@ -15,10 +16,15 @@
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/SpriteFont1.spritefont</File>
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/square.png</File>
     <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/tangram.png</File>
+=======
+    <File>C:/Users/becke/source/repos/TangramTrouble/Content/blankButton.png</File>
+    <File>C:/Users/becke/source/repos/TangramTrouble/Content/SpriteFont1.spritefont</File>
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+<<<<<<< HEAD
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
@@ -28,5 +34,7 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+=======
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371
   </DestFiles>
 </SourceFileCollection>

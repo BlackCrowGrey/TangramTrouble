@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\zenor\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\zenor\\.nuget\\packages"
+=======
+      "C:\\Users\\becke\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\becke\\.nuget\\packages"
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371
     ]
   }
 }

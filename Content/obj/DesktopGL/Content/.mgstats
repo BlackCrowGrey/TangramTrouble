@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+<<<<<<< HEAD
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle1.png","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/bigTriangle1.xnb","TextureProcessor","Texture2DContent",4464,180685,0.2143948
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle2.png","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/bigTriangle2.xnb","TextureProcessor","Texture2DContent",5428,180685,0.0094373
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/blankButton.png","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/blankButton.xnb","TextureProcessor","Texture2DContent",1493,700501,0.022342
@@ -10,3 +11,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/SpriteFont1.spritefont","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/SpriteFont1.xnb","FontDescriptionProcessor","SpriteFontContent",2078,21538,0.115644
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/square.png","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/square.xnb","TextureProcessor","Texture2DContent",1656,93721,0.0059041
 "C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/tangram.png","C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/tangram.xnb","TextureProcessor","Texture2DContent",2611,610645,0.0172272
+=======
+"C:/Users/becke/source/repos/TangramTrouble/Content/blankButton.png","C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/Content/blankButton.xnb","TextureProcessor","Texture2DContent",1493,700501,0.3883429
+"C:/Users/becke/source/repos/TangramTrouble/Content/SpriteFont1.spritefont","C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/Content/SpriteFont1.xnb","FontDescriptionProcessor","SpriteFontContent",2078,21538,0.4501321
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371

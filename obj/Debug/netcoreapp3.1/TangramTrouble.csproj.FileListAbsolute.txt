@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.exe
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.deps.json
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.runtimeconfig.json
@@ -32,3 +33,30 @@ C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\Content\SpriteFont1.xnb
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\Content\square.xnb
 C:\Users\zenor\source\repos\IGME 106 pt 2\TangramTrouble\bin\Debug\netcoreapp3.1\Content\tangram.xnb
+=======
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.exe
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.deps.json
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.runtimeconfig.json
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.runtimeconfig.dev.json
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.dll
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\TangramTrouble.pdb
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.csprojAssemblyReference.cache
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.AssemblyInfoInputs.cache
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.AssemblyInfo.cs
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.csproj.CoreCompileInputs.cache
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.csproj.CopyComplete
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.dll
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.pdb
+C:\Users\becke\source\repos\TangramTrouble\obj\Debug\netcoreapp3.1\TangramTrouble.genruntimeconfig.cache
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\Content\blankButton.xnb
+C:\Users\becke\source\repos\TangramTrouble\bin\Debug\netcoreapp3.1\Content\SpriteFont1.xnb
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371

@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<<<<<<< HEAD
-  <SourceFile>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/SpriteFont1.spritefont</SourceFile>
-  <SourceTime>2021-10-16T16:40:24.9485268-04:00</SourceTime>
-  <DestFile>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bin/DesktopGL/Content/SpriteFont1.xnb</DestFile>
-  <DestTime>2021-10-16T16:40:26.9311761-04:00</DestTime>
-=======
   <SourceFile>C:/Users/becke/source/repos/TangramTrouble/Content/SpriteFont1.spritefont</SourceFile>
   <SourceTime>2021-10-01T21:27:08.6341259-04:00</SourceTime>
-  <DestFile>C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/Content/SpriteFont1.xnb</DestFile>
-  <DestTime>2021-10-07T19:23:18.6253655-04:00</DestTime>
->>>>>>> 4600ea9fd25627dba8156be91259be749ad82371
+  <DestFile>C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/SpriteFont1.xnb</DestFile>
+  <DestTime>2021-10-07T19:23:17.3990381-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-04:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

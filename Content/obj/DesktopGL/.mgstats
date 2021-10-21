@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/becke/source/repos/TangramTrouble/Content/blankButton.png","C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/blankButton.xnb","TextureProcessor","Texture2DContent",1493,700501,0.5192048
+"C:/Users/becke/source/repos/TangramTrouble/Content/SpriteFont1.spritefont","C:/Users/becke/source/repos/TangramTrouble/Content/bin/DesktopGL/SpriteFont1.xnb","FontDescriptionProcessor","SpriteFontContent",2078,21538,0.6874916

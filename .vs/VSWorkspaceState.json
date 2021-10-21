@@ -2,6 +2,10 @@
   "ExpandedNodes": [
     ""
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\TangramTrouble.sln",
+=======
+  "SelectedNode": "\\Game1.cs",
+>>>>>>> 4600ea9fd25627dba8156be91259be749ad82371
   "PreviewInSolutionExplorer": false
 }
