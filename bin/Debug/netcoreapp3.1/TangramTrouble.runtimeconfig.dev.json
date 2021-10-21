@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\zenor\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\zenor\\.nuget\\packages"
+    ]
+  }
+}

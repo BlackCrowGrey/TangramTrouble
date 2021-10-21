@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle1.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/bigTriangle2.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/blankButton.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/greenGummy.PNG</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/mediumTriangle.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/parallelogram.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/smallTriangle1.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/smallTriangle2.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/SpriteFont1.spritefont</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/square.png</File>
+    <File>C:/Users/zenor/source/repos/IGME 106 pt 2/TangramTrouble/Content/tangram.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

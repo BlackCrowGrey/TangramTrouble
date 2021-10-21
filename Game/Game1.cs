@@ -71,22 +71,31 @@ namespace TangramTrouble
             // TODO: use this.Content to load your game content here
             tangramOutline = this.Content.Load<Texture2D>("tangram");
             gui.Outline = tangramOutline;
+
             bigTriangleA = this.Content.Load<Texture2D>("bigTriangle1");
-            gui.BigTriangle1 = bigTriangleA;
+            gui.BigTriangle1 = new Shape(bigTriangleA, 50, GraphicsDevice.Viewport.Height - 75);
+
             bigTriangleB = this.Content.Load<Texture2D>("bigTriangle2");
-            gui.BigTriangle2 = bigTriangleB;
+            gui.BigTriangle2 = new Shape(bigTriangleB, 150, GraphicsDevice.Viewport.Height - 75);
+
             mediumTriangle = this.Content.Load<Texture2D>("mediumTriangle");
-            gui.MediumTriangle = mediumTriangle;
+            gui.MediumTriangle = new Shape(mediumTriangle, 250, GraphicsDevice.Viewport.Height - 75);
+
             smallTriangleA = this.Content.Load<Texture2D>("smallTriangle1");
-            gui.SmallTriangle1 = smallTriangleA;
+            gui.SmallTriangle1 = new Shape(smallTriangleA, 350, GraphicsDevice.Viewport.Height - 75);
+
             smallTriangleB = this.Content.Load<Texture2D>("smallTriangle2");
-            gui.SmallTriangle2 = smallTriangleB;
+            gui.SmallTriangle2 = new Shape(smallTriangleB, 450, GraphicsDevice.Viewport.Height - 75);
+
             square = this.Content.Load<Texture2D>("square");
-            gui.Square = square;
+            gui.Square = new Shape(square, 550, GraphicsDevice.Viewport.Height - 75);
+
             parallelogram = this.Content.Load<Texture2D>("parallelogram");
-            gui.Parallelogram = parallelogram;
+            gui.Parallelogram = new Shape(parallelogram, 650, GraphicsDevice.Viewport.Height - 75);
+
             button = this.Content.Load<Texture2D>("blankButton");
             gui.Button = button;
+
             font = this.Content.Load<SpriteFont>("SpriteFont1");
             gui.Font = font;
 
@@ -137,7 +146,16 @@ namespace TangramTrouble
                         gamestate = GameState.Pause;
                     }
 
+
                     testShape.Drag(mouse);
+
+                    gui.BigTriangle1.Drag(mouse);
+                    gui.BigTriangle2.Drag(mouse);
+                    gui.MediumTriangle.Drag(mouse);
+                    gui.SmallTriangle1.Drag(mouse);
+                    gui.SmallTriangle2.Drag(mouse);
+                    gui.Square.Drag(mouse);
+                    gui.Parallelogram.Drag(mouse);
                     break;
 
                 case GameState.Pause:
