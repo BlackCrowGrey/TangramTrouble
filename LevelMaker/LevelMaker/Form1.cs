@@ -12,7 +12,7 @@ using System.IO;
 namespace LevelMaker
 {
     /// <summary>
-    /// Created by: Dylan Mahala
+    /// Created by: Dylan Mahala, Andrew Tark
     /// Created on: 10/20/21
     /// Purpose: Level Designer for Tangram Trouble
     /// </summary>
