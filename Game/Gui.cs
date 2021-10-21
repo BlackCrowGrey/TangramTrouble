@@ -20,6 +20,7 @@ namespace TangramTrouble
 		private GraphicsDeviceManager gd;
 
 		private Texture2D outline;
+		private Shape testShape;
 		private Shape bigTriangle1;
 		private Shape bigTriangle2;
 		private Shape mediumTriangle;
@@ -56,6 +57,12 @@ namespace TangramTrouble
 			get { return outline; }
 			set { outline = value; }
 		}
+
+		public Shape TestShape
+        {
+            get { return testShape; }
+            set { testShape = value; }
+        }
 
 		/// <summary>
 		/// Texture2D that holds the first big triangle image
@@ -202,26 +209,21 @@ namespace TangramTrouble
 			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 175, gd.GraphicsDevice.Viewport.Width, 175), Color.DarkGray);
 
 			//Displays All Of The Tangram Pieces
-			bigTriangle1.Position = new Rectangle(50, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			bigTriangle1.Draw(sb, Color.White);
 
-			bigTriangle2.Position = new Rectangle(150, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			bigTriangle2.Draw(sb, Color.White);
 
-			mediumTriangle.Position = new Rectangle(250, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			mediumTriangle.Draw(sb, Color.White);
 
-			smallTriangle1.Position = new Rectangle(350, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			smallTriangle1.Draw(sb, Color.White);
 
-			smallTriangle2.Position = new Rectangle(450, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			smallTriangle2.Draw(sb, Color.White);
 
-			square.Position = new Rectangle(550, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			square.Draw(sb, Color.White);
 
-			parallelogram.Position = new Rectangle(650, gd.GraphicsDevice.Viewport.Height - 75, 100, 100);
 			parallelogram.Draw(sb, Color.White);
+
+			//testShape.Draw(sb, Color.White);
 		}
 
 		/// <summary>

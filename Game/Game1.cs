@@ -99,8 +99,8 @@ namespace TangramTrouble
             font = this.Content.Load<SpriteFont>("SpriteFont1");
             gui.Font = font;
 
-            gummy = this.Content.Load<Texture2D>("greenGummy");
-            testShape = new Shape(gummy, 10, 10);
+            //gummy = this.Content.Load<Texture2D>("greenGummy");
+            //gui.TestShape = new Shape(gummy, 10, 10);
         }
 
         protected override void Update(GameTime gameTime)
@@ -147,7 +147,7 @@ namespace TangramTrouble
                     }
 
 
-                    testShape.Drag(mouse);
+                    //gui.TestShape.Drag(mouse);
 
                     gui.BigTriangle1.Drag(mouse);
                     gui.BigTriangle2.Drag(mouse);
@@ -209,7 +209,6 @@ namespace TangramTrouble
                 case GameState.GamePlay:
                     //gameplay stuff
                     gui.DrawGamePlay();
-                    testShape.Draw(_spriteBatch, Color.White);
                     break;
 
                 case GameState.Pause:
