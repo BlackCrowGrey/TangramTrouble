@@ -28,6 +28,7 @@ namespace TangramTrouble
         int level;
         int levelShapes;
         int totalShapes;
+
         Texture2D tangramOutline;
         Texture2D bigTriangleA;
         Texture2D bigTriangleB;
