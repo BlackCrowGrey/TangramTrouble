@@ -142,5 +142,17 @@ namespace LevelMaker
             }
             
         }
+        //when the menu tooltip is clicked
+        //a message box is displayed with the instructions of the level designer
+        private void instructionsMenu_Click(object sender, EventArgs e)
+        {
+            string message = "Welcome to the Level Maker for Tanagram Trouble!\nInstructions are pretty simple." +
+                "\nAll you have to do is designate a height and width in their respective boxes." +
+                "\nThen choose the shapes using the check boxes in the bottom left menu.\n" +
+                "Whatever you have chosen will be displayed in the preview window. And finally, to " +
+                "create your specified file, simply press the generate button.";
+            string title = "Instructions";
+            MessageBox.Show(message, title);
+        }
     }
 }

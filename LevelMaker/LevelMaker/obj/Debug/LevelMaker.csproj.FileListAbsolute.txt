@@ -8,3 +8,13 @@ C:\Users\dbox\Documents\GitHub\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\Le
 C:\Users\dbox\Documents\GitHub\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csproj.CoreCompileInputs.cache
 C:\Users\dbox\Documents\GitHub\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.exe
 C:\Users\dbox\Documents\GitHub\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.pdb
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\bin\Debug\LevelMaker.exe.config
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\bin\Debug\LevelMaker.exe
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\bin\Debug\LevelMaker.pdb
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csprojAssemblyReference.cache
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.Form1.resources
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.Properties.Resources.resources
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csproj.GenerateResource.cache
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csproj.CoreCompileInputs.cache
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.exe
+C:\Users\FK14371\source\repos\TangramTrouble\LevelMaker\LevelMaker\obj\Debug\LevelMaker.pdb

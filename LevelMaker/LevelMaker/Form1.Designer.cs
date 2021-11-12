@@ -36,6 +36,9 @@
             this.heightLabel = new System.Windows.Forms.Label();
             this.previewLabel = new System.Windows.Forms.Label();
             this.previewBox = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.instructionsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // shapeCheckBox
@@ -91,7 +94,7 @@
             // 
             // widthLabel
             // 
-            this.widthLabel.Location = new System.Drawing.Point(111, 13);
+            this.widthLabel.Location = new System.Drawing.Point(111, 28);
             this.widthLabel.Name = "widthLabel";
             this.widthLabel.Size = new System.Drawing.Size(95, 13);
             this.widthLabel.TabIndex = 4;
@@ -100,7 +103,7 @@
             // 
             // heightLabel
             // 
-            this.heightLabel.Location = new System.Drawing.Point(12, 13);
+            this.heightLabel.Location = new System.Drawing.Point(12, 28);
             this.heightLabel.Name = "heightLabel";
             this.heightLabel.Size = new System.Drawing.Size(95, 13);
             this.heightLabel.TabIndex = 6;
@@ -124,6 +127,23 @@
             this.previewBox.Size = new System.Drawing.Size(261, 214);
             this.previewBox.TabIndex = 9;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.instructionsMenu});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(491, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // instructionsMenu
+            // 
+            this.instructionsMenu.Name = "instructionsMenu";
+            this.instructionsMenu.Size = new System.Drawing.Size(81, 20);
+            this.instructionsMenu.Text = "Instructions";
+            this.instructionsMenu.Click += new System.EventHandler(this.instructionsMenu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,8 +157,12 @@
             this.Controls.Add(this.heightBox);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.shapeCheckBox);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Level Maker";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +178,8 @@
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label previewLabel;
         private System.Windows.Forms.TextBox previewBox;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem instructionsMenu;
     }
 }
 
