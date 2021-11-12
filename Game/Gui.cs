@@ -196,17 +196,17 @@ namespace TangramTrouble
 			gd.GraphicsDevice.Clear(Color.Tan);
 
 			//Placeholder Until Board Is Designed
-			sb.DrawString(font, "Level 1", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Level 1").Length() / 2, 25), Color.DarkSlateGray);
+			sb.DrawString(font, "Level 1", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Level 1").Length() / 2, 50), Color.DarkSlateGray);
 
 			//Displays Button Instructing User How To Move Between Screens
-			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 50, 360, 30), Color.White);
-			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 54), Color.SteelBlue);
+			sb.Draw(button, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 180, 100, 360, 30), Color.White);
+			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 104), Color.SteelBlue);
 
 			//Outline Used To Represent The Shaped To Be Made Using The Tangram Pieces
-			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 225, 100, 450, 600), Color.White);
+			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 225, 165, 450, 600), Color.White);
 
 			//Repository To Hold Blocks To Use In The Puzzles
-			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 175, gd.GraphicsDevice.Viewport.Width, 175), Color.DarkGray);
+			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 200, gd.GraphicsDevice.Viewport.Width, 200), Color.DarkGray);
 
 			//Displays All Of The Tangram Pieces
 			bigTriangle1.Draw(sb, Color.White);
