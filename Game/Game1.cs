@@ -200,7 +200,7 @@ namespace TangramTrouble
                             {
 
                             }
-                            else if(rectangles[i].Intersects(rectangles[j]))
+                            else if((rectangles[i].Intersects(rectangles[j])))
                             {
                                 intersecting[i] = true;
                             }
