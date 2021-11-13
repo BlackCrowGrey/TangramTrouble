@@ -179,7 +179,7 @@ namespace TangramTrouble
                         prevGamestate = gamestate;
                         gamestate = GameState.Pause;
                     }
-
+                    
                     for (int i = 0; i < shapes.Count - 1; i++)
                     {
                         Rectangle shape1 = new Rectangle(shapes[i].PositionX - shapes[i].Width / 2, shapes[i].PositionY - shapes[i].Height / 2, shapes[i].Width, shapes[i].Height);
@@ -190,7 +190,7 @@ namespace TangramTrouble
                             shapes[i].Rotate(mouse, keyboard);
                         }
                     }
-
+                    
                     //gui.TestShape.Drag(mouse);
                     //gui.BigTriangle1.Drag(mouse);
                     //gui.BigTriangle2.Drag(mouse);
