@@ -38,6 +38,9 @@
             this.previewBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.instructionsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,11 +147,41 @@
             this.instructionsMenu.Text = "Instructions";
             this.instructionsMenu.Click += new System.EventHandler(this.instructionsMenu_Click);
             // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(255, 337);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(194, 48);
+            this.ClearButton.TabIndex = 12;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.Location = new System.Drawing.Point(215, 20);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(264, 21);
+            this.NameLabel.TabIndex = 13;
+            this.NameLabel.Text = "File Name";
+            this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NameBox
+            // 
+            this.NameBox.Location = new System.Drawing.Point(218, 44);
+            this.NameBox.MaxLength = 3200;
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(261, 20);
+            this.NameBox.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 404);
+            this.Controls.Add(this.NameBox);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.previewBox);
             this.Controls.Add(this.previewLabel);
             this.Controls.Add(this.heightLabel);
@@ -180,6 +213,9 @@
         private System.Windows.Forms.TextBox previewBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem instructionsMenu;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.TextBox NameBox;
     }
 }
 

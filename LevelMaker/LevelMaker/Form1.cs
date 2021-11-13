@@ -34,8 +34,7 @@ namespace LevelMaker
         //S-Block : S
         //Z-Block : Z
 
-        StreamWriter sw = File.CreateText("../../../Level.txt");
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -44,8 +43,20 @@ namespace LevelMaker
         //Generates the final file
         private void generateButton_Click(object sender, EventArgs e)
         {
-            sw.WriteLine(previewBox.Text);
-            sw.Close();
+            if (NameBox.Text == "")
+            {
+                NameBox.Text = "PLEASE SUPPLY A FILE NAME";
+            }
+
+            else
+            {
+                StreamWriter sw = File.CreateText("../../../Levels/" + NameBox.Text + ".txt");
+                sw.WriteLine(previewBox.Text);
+                sw.Close();
+                previewLabel.Text = "File Complete!";
+            }
+
+
         }
 
         //Adding the shapes using the checked and unchecked boxes
@@ -55,59 +66,101 @@ namespace LevelMaker
             {
                 //Large Square
                 case 0:
-                    previewBox.Text += " LS ";
+                    if (!shapeCheckBox.GetItemChecked(0))
+                    {
+                        previewBox.Text += " LS ";
+                    }
                     break;
                 //Small Square
                 case 1:
-                    previewBox.Text += " SS ";
+                    if (!shapeCheckBox.GetItemChecked(1))
+                    {
+                        previewBox.Text += " SS ";
+                    }
                     break;
                 //Large Triangle
                 case 2:
-                    previewBox.Text += " TL ";
+                    if (!shapeCheckBox.GetItemChecked(2))
+                    {
+                        previewBox.Text += " TL ";
+                    }
                     break;
                 //Medium Triangle
                 case 3:
-                    previewBox.Text += " TM ";
+                    if (!shapeCheckBox.GetItemChecked(3))
+                    {
+                        previewBox.Text += " TM ";
+                    }
                     break;
                 //Small Triangle
                 case 4:
-                    previewBox.Text += " TS ";
+                    if (!shapeCheckBox.GetItemChecked(4))
+                    {
+                        previewBox.Text += " TS ";
+                    }
                     break;
                 //Parallelogram
                 case 5:
-                    previewBox.Text += " P ";
+                    if (!shapeCheckBox.GetItemChecked(5))
+                    {
+                        previewBox.Text += " P ";
+                    }
                     break;
                 //Short Rectangle
                 case 6:
-                    previewBox.Text += " RS ";
+                    if (!shapeCheckBox.GetItemChecked(6))
+                    {
+                        previewBox.Text += " RS ";
+                    }
                     break;
                 //Medium Rectangle
                 case 7:
-                    previewBox.Text += " RM ";
+                    if (!shapeCheckBox.GetItemChecked(7))
+                    {
+                        previewBox.Text += " RM ";
+                    }
                     break;
                 //Long Rectangle
                 case 8:
-                    previewBox.Text += " RL ";
+                    if (!shapeCheckBox.GetItemChecked(8))
+                    {
+                        previewBox.Text += " RL ";
+                    }
                     break;
                 //L-Block
                 case 9:
-                    previewBox.Text += " L ";
+                    if (!shapeCheckBox.GetItemChecked(9))
+                    {
+                        previewBox.Text += " L ";
+                    }
                     break;
                 //J-Block
                 case 10:
-                    previewBox.Text += " J ";
+                    if (!shapeCheckBox.GetItemChecked(10))
+                    {
+                        previewBox.Text += " J ";
+                    }
                     break;
                 //T-Block
                 case 11:
-                    previewBox.Text += " T ";
+                    if (!shapeCheckBox.GetItemChecked(11))
+                    {
+                        previewBox.Text += " T ";
+                    }
                     break;
                 //S-Block
                 case 12:
-                    previewBox.Text += " S ";
+                    if (!shapeCheckBox.GetItemChecked(12))
+                    {
+                        previewBox.Text += " S ";
+                    }
                     break;
                 //Z-Block
                 case 13:
-                    previewBox.Text += " Z ";
+                    if (!shapeCheckBox.GetItemChecked(13))
+                    {
+                        previewBox.Text += " Z ";
+                    }
                     break;
                 default:
                     break;
@@ -146,13 +199,26 @@ namespace LevelMaker
         //a message box is displayed with the instructions of the level designer
         private void instructionsMenu_Click(object sender, EventArgs e)
         {
-            string message = "Welcome to the Level Maker for Tanagram Trouble!\nInstructions are pretty simple." +
-                "\nAll you have to do is designate a height and width in their respective boxes." +
-                "\nThen choose the shapes using the check boxes in the bottom left menu.\n" +
-                "Whatever you have chosen will be displayed in the preview window. And finally, to " +
-                "create your specified file, simply press the generate button.";
+            string message = "Welcome to the Level Maker for Tanagram Trouble!" +
+                "\nChoose the shapes you want to have present. " +
+                "\nTo select one shape twice you must deselect and reselect it." +
+                "\nMake sure to choose all shapes you want before inputting height and width" + 
+                "\nDesignate a height and width in their respective boxes." +
+                "\nWhatever you have chosen will be displayed in the preview window." +
+                "\nPress the generate button when satisified.";
             string title = "Instructions";
             MessageBox.Show(message, title);
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            heightBox.Text = "";
+            widthBox.Text = "";
+            previewBox.Text = "";
+            for (int i = 0; i < shapeCheckBox.Items.Count; i++)
+            {
+                shapeCheckBox.SetItemChecked(i, false);
+            }
         }
     }
 }
