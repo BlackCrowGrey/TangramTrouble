@@ -68,12 +68,13 @@ namespace TangramTrouble
         {
             //gets the location of the mouse, but as a rectangle
             Rectangle mouseLoc = new Rectangle(mouse.Position.X, mouse.Position.Y, 1, 1);
+            Rectangle imageLoc = new Rectangle(PositionX - Width / 2, PositionY - Height / 2, Width, Height);
             //if the mouse is clicking the shape AND is on the shape...
-            if (Position.Intersects(mouseLoc) && keyboard.IsKeyDown(Keys.Q))
+            if (imageLoc.Intersects(mouseLoc) && keyboard.IsKeyDown(Keys.Q))
             {
                 Angle -= 0.02f;
             }
-            if (Position.Intersects(mouseLoc) && keyboard.IsKeyDown(Keys.E))
+            if (imageLoc.Intersects(mouseLoc) && keyboard.IsKeyDown(Keys.E))
             {
                 Angle += 0.02f;
             }
