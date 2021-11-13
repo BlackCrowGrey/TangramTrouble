@@ -179,12 +179,33 @@ namespace TangramTrouble
                         prevGamestate = gamestate;
                         gamestate = GameState.Pause;
                     }
-                    
-                    for (int i = 0; i < shapes.Count - 1; i++)
+
+                    Rectangle[] rectangles = new Rectangle[7];
+                    for (int i = 0; i < shapes.Count; i++)
                     {
-                        Rectangle shape1 = new Rectangle(shapes[i].PositionX - shapes[i].Width / 2, shapes[i].PositionY - shapes[i].Height / 2, shapes[i].Width, shapes[i].Height);
-                        Rectangle shape2 = new Rectangle(shapes[i + 1].PositionX - shapes[i + 1].Width / 2, shapes[i + 1].PositionY - shapes[i + 1].Height / 2, shapes[i + 1].Width, shapes[i + 1].Height);
-                        if (!shape1.Intersects(shape2))
+                        rectangles[i] = new Rectangle(shapes[i].PositionX - shapes[i].Width / 2, shapes[i].PositionY - shapes[i].Height / 2, shapes[i].Width, shapes[i].Height);
+                    }
+
+                    bool[] intersecting = new bool[7];
+                    for (int i = 0; i < intersecting.Length; i++)
+                    {
+                        intersecting[i] = false;
+                    }
+
+                    for (int i = 0; i < rectangles.Length; i++)
+                    {
+                        for(int j = 0; j < rectangles.Length; j++)
+                        {
+                            if(i == j)
+                            {
+
+                            }
+                            else if(rectangles[i].Intersects(rectangles[j]))
+                            {
+                                intersecting[i] = true;
+                            }
+                        }
+                        if (!intersecting[i])
                         {
                             shapes[i].Drag(mouse);
                             shapes[i].Rotate(mouse, keyboard);
@@ -192,20 +213,7 @@ namespace TangramTrouble
                     }
                     
                     //gui.TestShape.Drag(mouse);
-                    //gui.BigTriangle1.Drag(mouse);
-                    //gui.BigTriangle2.Drag(mouse);
-                    //gui.MediumTriangle.Drag(mouse);
-                    //gui.SmallTriangle1.Drag(mouse);
-                    //gui.SmallTriangle2.Drag(mouse);
-                    //gui.Square.Drag(mouse);
-                    //gui.Parallelogram.Drag(mouse);
-                    //gui.BigTriangle1.Rotate(mouse, keyboard);
-                    //gui.BigTriangle2.Rotate(mouse, keyboard);
-                    //gui.MediumTriangle.Rotate(mouse, keyboard);
-                    //gui.SmallTriangle1.Rotate(mouse, keyboard);
-                    //gui.SmallTriangle2.Rotate(mouse, keyboard);
-                    //gui.Square.Rotate(mouse, keyboard);
-                    //gui.Parallelogram.Rotate(mouse, keyboard);
+
                     break;
 
                 case GameState.Pause:
