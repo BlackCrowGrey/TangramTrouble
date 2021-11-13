@@ -28,6 +28,7 @@ namespace TangramTrouble
         int level;
         int levelShapes;
         int totalShapes;
+        bool holdingShape;
 
         Texture2D tangramOutline;
         Texture2D bigTriangleA;
@@ -40,8 +41,9 @@ namespace TangramTrouble
         Texture2D button;
         SpriteFont font;
         Gui gui;
+        List<Shape> shapes = new List<Shape>();
 
-        Shape testShape;
+        //Shape testShape;
         Texture2D gummy;
         MouseState mouse;
         KeyboardState keyboard;
@@ -84,38 +86,45 @@ namespace TangramTrouble
 
             bigTriangleA = this.Content.Load<Texture2D>("bigTriangle1");
             gui.BigTriangle1 = new Shape(bigTriangleA, 50, GraphicsDevice.Viewport.Height - 75);
-            gui.BigTriangle1.PositionX = 150;
-            gui.BigTriangle1.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 75;
+            gui.BigTriangle1.PositionX = 50;
+            gui.BigTriangle1.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            shapes.Add(gui.BigTriangle1);
 
             bigTriangleB = this.Content.Load<Texture2D>("bigTriangle2");
             gui.BigTriangle2 = new Shape(bigTriangleB, 150, GraphicsDevice.Viewport.Height - 75);
             gui.BigTriangle2.PositionX = 375;
             gui.BigTriangle2.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            shapes.Add(gui.BigTriangle2);
 
             mediumTriangle = this.Content.Load<Texture2D>("mediumTriangle");
             gui.MediumTriangle = new Shape(mediumTriangle, 250, GraphicsDevice.Viewport.Height - 75);
             gui.MediumTriangle.PositionX = 550;
             gui.MediumTriangle.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            shapes.Add(gui.MediumTriangle);
 
             smallTriangleA = this.Content.Load<Texture2D>("smallTriangle1");
             gui.SmallTriangle1 = new Shape(smallTriangleA, 350, GraphicsDevice.Viewport.Height - 75);
             gui.SmallTriangle1.PositionX = 750;
             gui.SmallTriangle1.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 125;
+            shapes.Add(gui.SmallTriangle1);
 
             smallTriangleB = this.Content.Load<Texture2D>("smallTriangle2");
             gui.SmallTriangle2 = new Shape(smallTriangleB, 450, GraphicsDevice.Viewport.Height - 75);
             gui.SmallTriangle2.PositionX = 925;
             gui.SmallTriangle2.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            shapes.Add(gui.BigTriangle2);
 
             square = this.Content.Load<Texture2D>("square");
             gui.Square = new Shape(square, 550, GraphicsDevice.Viewport.Height - 75);
             gui.Square.PositionX = 1050;
             gui.Square.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            shapes.Add(gui.Square);
 
             parallelogram = this.Content.Load<Texture2D>("parallelogram");
             gui.Parallelogram = new Shape(parallelogram, 650, GraphicsDevice.Viewport.Height - 75);
             gui.Parallelogram.PositionX = 1225;
             gui.Parallelogram.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 125;
+            shapes.Add(gui.Parallelogram);
 
             button = this.Content.Load<Texture2D>("blankButton");
             gui.Button = button;
