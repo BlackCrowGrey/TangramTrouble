@@ -19,9 +19,5 @@ namespace TangramTrouble
         /*Constructors*/
 
         /*Methods*/
-        public void MoveShape(Shape shape, int xpos, int ypos)
-        {
-            //put code here later
-        }
     }
 }
