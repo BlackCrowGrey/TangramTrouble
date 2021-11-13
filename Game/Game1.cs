@@ -28,7 +28,6 @@ namespace TangramTrouble
         int level;
         int levelShapes;
         int totalShapes;
-        bool holdingShape;
 
         Texture2D tangramOutline;
         Texture2D bigTriangleA;
@@ -110,6 +109,7 @@ namespace TangramTrouble
 
             smallTriangleB = this.Content.Load<Texture2D>("smallTriangle2");
             gui.SmallTriangle2 = new Shape(smallTriangleB, 450, GraphicsDevice.Viewport.Height - 75);
+
             gui.SmallTriangle2.PositionX = 975;
             gui.SmallTriangle2.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 100;
             shapes.Add(gui.SmallTriangle2);
@@ -180,10 +180,19 @@ namespace TangramTrouble
                         gamestate = GameState.Pause;
                     }
 
-                    for (int i = 0; i < shapes.Count - 1; i++)
+                    for (int i = 0; i < shapes.Count; i++)
                     {
                         Rectangle shape1 = new Rectangle(shapes[i].PositionX - shapes[i].Width / 2, shapes[i].PositionY - shapes[i].Height / 2, shapes[i].Width, shapes[i].Height);
-                        Rectangle shape2 = new Rectangle(shapes[i + 1].PositionX - shapes[i + 1].Width / 2, shapes[i + 1].PositionY - shapes[i + 1].Height / 2, shapes[i + 1].Width, shapes[i + 1].Height);
+                        Rectangle shape2;
+                        try
+                        {
+                            shape2 = new Rectangle(shapes[i + 1].PositionX - shapes[i + 1].Width / 2, shapes[i + 1].PositionY - shapes[i + 1].Height / 2, shapes[i + 1].Width, shapes[i + 1].Height);
+                        }
+                        catch
+                        {
+                            shape2 = new Rectangle();
+                        }
+                        
                         if (!shape1.Intersects(shape2))
                         {
                             shapes[i].Drag(mouse);
