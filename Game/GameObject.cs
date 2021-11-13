@@ -15,6 +15,7 @@ namespace TangramTrouble
         /*Fields*/
         private Rectangle position;
         private Texture2D image;
+        private float angle;
 
         /*Properties*/
 
@@ -42,7 +43,7 @@ namespace TangramTrouble
 
         public Vector2 Origin
         {
-            get { return new Vector2(image.Width / 2, image.Height / 2); }
+            get { return new Vector2(Width / 2, Height / 2); }
         }
 
         /// <summary>
@@ -72,21 +73,28 @@ namespace TangramTrouble
             set { position.Y = value; }
         }
 
+        public float Angle
+        {
+            get { return angle; }
+            set { angle = value; }
+        }
+
         /*Constructors*/
         public GameObject(Texture2D image, int xStart, int yStart)
         {
             this.image = image;
             position = new Rectangle(
-                xStart, 
-                yStart, 
-                image.Width, 
+                xStart,
+                yStart,
+                image.Width,
                 image.Height);
+            angle = 0f;
         }
 
         /*Methods*/
         public virtual void Draw(SpriteBatch sb, Color color)
         {
-            sb.Draw(image, position, Color.White);
+            sb.Draw(image, Position, null, color, angle, Origin, SpriteEffects.None, 1f);
         }
     }
 }

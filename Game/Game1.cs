@@ -44,6 +44,7 @@ namespace TangramTrouble
         Shape testShape;
         Texture2D gummy;
         MouseState mouse;
+        KeyboardState keyboard;
 
         GameState gamestate;
         GameState prevGamestate;
@@ -68,6 +69,8 @@ namespace TangramTrouble
             _graphics.PreferredBackBufferHeight = 1000;
             _graphics.ApplyChanges();
 
+
+
             base.Initialize();
         }
 
@@ -81,8 +84,8 @@ namespace TangramTrouble
 
             bigTriangleA = this.Content.Load<Texture2D>("bigTriangle1");
             gui.BigTriangle1 = new Shape(bigTriangleA, 50, GraphicsDevice.Viewport.Height - 75);
-            gui.BigTriangle1.PositionX = 50;
-            gui.BigTriangle1.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 175;
+            gui.BigTriangle1.PositionX = 150;
+            gui.BigTriangle1.PositionY = gui.GD.GraphicsDevice.Viewport.Height - 75;
 
             bigTriangleB = this.Content.Load<Texture2D>("bigTriangle2");
             gui.BigTriangle2 = new Shape(bigTriangleB, 150, GraphicsDevice.Viewport.Height - 75);
@@ -131,6 +134,7 @@ namespace TangramTrouble
 
             // TODO: Add your update logic here
             mouse = Mouse.GetState();
+            keyboard = Keyboard.GetState();
 
             switch (gamestate)
             {
@@ -169,7 +173,6 @@ namespace TangramTrouble
 
 
                     //gui.TestShape.Drag(mouse);
-
                     gui.BigTriangle1.Drag(mouse);
                     gui.BigTriangle2.Drag(mouse);
                     gui.MediumTriangle.Drag(mouse);
@@ -177,6 +180,13 @@ namespace TangramTrouble
                     gui.SmallTriangle2.Drag(mouse);
                     gui.Square.Drag(mouse);
                     gui.Parallelogram.Drag(mouse);
+                    gui.BigTriangle1.Rotate(mouse, keyboard);
+                    gui.BigTriangle2.Rotate(mouse, keyboard);
+                    gui.MediumTriangle.Rotate(mouse, keyboard);
+                    gui.SmallTriangle1.Rotate(mouse, keyboard);
+                    gui.SmallTriangle2.Rotate(mouse, keyboard);
+                    gui.Square.Rotate(mouse, keyboard);
+                    gui.Parallelogram.Rotate(mouse, keyboard);
                     break;
 
                 case GameState.Pause:

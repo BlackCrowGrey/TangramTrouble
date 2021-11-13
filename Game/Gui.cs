@@ -203,14 +203,14 @@ namespace TangramTrouble
 			sb.DrawString(font, "Press Space To Pause The Game", new Vector2(gd.GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press Space To Pause The Game").Length() / 2, 104), Color.SteelBlue);
 
 			//Outline Used To Represent The Shaped To Be Made Using The Tangram Pieces
-			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 225, 165, 450, 600), Color.White);
+			sb.Draw(outline, new Rectangle(gd.GraphicsDevice.Viewport.Width / 2 - 225, 165, 465, 565), Color.White);
 
 			//Repository To Hold Blocks To Use In The Puzzles
 			sb.Draw(button, new Rectangle(0, gd.GraphicsDevice.Viewport.Height - 200, gd.GraphicsDevice.Viewport.Width, 200), Color.DarkGray);
 
 			//Displays All Of The Tangram Pieces
 			bigTriangle1.Draw(sb, Color.White);
-
+			
 			bigTriangle2.Draw(sb, Color.White);
 
 			mediumTriangle.Draw(sb, Color.White);
