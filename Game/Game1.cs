@@ -29,6 +29,7 @@ namespace TangramTrouble
         int levelShapes;
         int totalShapes;
         bool holdingShape;
+        bool[] dragging;
 
         Texture2D tangramOutline;
         Texture2D bigTriangleA;
@@ -71,7 +72,11 @@ namespace TangramTrouble
             _graphics.PreferredBackBufferHeight = 1000;
             _graphics.ApplyChanges();
 
-
+            dragging = new bool[7];
+            for (int i = 0; i < dragging.Length; i++)
+            {
+                dragging[i] = false;
+            }
 
             base.Initialize();
         }
@@ -186,29 +191,36 @@ namespace TangramTrouble
                         rectangles[i] = new Rectangle(shapes[i].PositionX - shapes[i].Width / 2, shapes[i].PositionY - shapes[i].Height / 2, shapes[i].Width, shapes[i].Height);
                     }
 
-                    bool[] intersecting = new bool[7];
-                    for (int i = 0; i < intersecting.Length; i++)
-                    {
-                        intersecting[i] = false;
-                    }
-
+                    Rectangle mouseLoc = new Rectangle(mouse.Position.X, mouse.Position.Y, 1, 1);
                     for (int i = 0; i < rectangles.Length; i++)
                     {
-                        for(int j = 0; j < rectangles.Length; j++)
-                        {
-                            if(i == j)
+                        if (rectangles[i].Intersects(mouseLoc)){
+                            bool currentlyDragging = false;
+                            int currentShape = -1;
+                            for (int j = 0; j < rectangles.Length; j++)
                             {
-
+                                if (dragging[j])
+                                {
+                                    currentShape = j;
+                                    currentlyDragging = true;
+                                }
                             }
-                            else if((rectangles[i].Intersects(rectangles[j])))
+                            if (currentlyDragging)
                             {
-                                intersecting[i] = true;
+                                shapes[currentShape].Drag(mouse);
+                                shapes[currentShape].Rotate(mouse, keyboard);
+                            }
+                            else
+                            {
+                                dragging[i] = true;
                             }
                         }
-                        if (!intersecting[i])
+                    }
+                    if(mouse.LeftButton != ButtonState.Pressed && !keyboard.IsKeyDown(Keys.Q) && !keyboard.IsKeyDown(Keys.E))
+                    {
+                        for (int i = 0; i < dragging.Length; i++)
                         {
-                            shapes[i].Drag(mouse);
-                            shapes[i].Rotate(mouse, keyboard);
+                            dragging[i] = false;
                         }
                     }
                     
